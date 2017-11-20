@@ -1,0 +1,20 @@
+{
+  "name": "napi",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "gypfile": true,
+  "dependencies": {},
+  "devDependencies": {
+    "node-gyp": "^3.6.2"
+  },
+  "scripts": {
+    "configure": "node-gyp configure",
+    "build": "node-gyp build",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

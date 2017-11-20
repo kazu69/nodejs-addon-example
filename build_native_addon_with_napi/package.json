@@ -1,0 +1,21 @@
+{
+  "name": "build_native_addon_with_napi",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "gypfile": true,
+  "dependencies": {},
+  "devDependencies": {
+    "binding": "^3.0.3",
+    "node-addon-api": "^1.0.0"
+  },
+  "scripts": {
+    "configure": "node-gyp configure",
+    "build": "node-gyp build",
+    "test": " node --napi-modules test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
