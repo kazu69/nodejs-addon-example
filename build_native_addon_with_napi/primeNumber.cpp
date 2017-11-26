@@ -29,12 +29,12 @@ napi_value Method(napi_env env, napi_callback_info info)
   status = napi_get_value_int32(env, args[0], &number);
   assert(status == napi_ok);
 
-  bool b;
+  bool data;
   PrimeNumber primeNumber;
-  b = primeNumber.isPrime((int)number);
+  data = primeNumber.isPrime((int)number);
 
   napi_value result;
-  status = napi_get_boolean(env, b, &result);
+  status = napi_get_boolean(env, data, &result);
   assert(status == napi_ok);
 
   return result;
