@@ -36,10 +36,6 @@ napi_value Method(napi_env env, napi_callback_info info)
   napi_value result;
   status = napi_get_boolean(env, b, &result);
   assert(status == napi_ok);
-  // status = napi_create_string_utf8(env, "world", 5, &world);
-//   if (status != napi_ok) {
-//     napi_throw_error(env, NULL, "Failed to create response value");
-//   }
 
   return result;
 }
@@ -51,10 +47,6 @@ void Init(napi_env env, napi_value exports, napi_value module, void* priv) {
   if (status != napi_ok) return;
   status = napi_set_named_property(env, exports, "isPrimeNumber", fn);
   if (status != napi_ok) return;
-  // napi_property_descriptor desc = {"isPrimeNumber", Method, 0, 0, 0, napi_default, 0};
-  // status = napi_define_properties(env, exports, 1, &desc);
-  // assert(status == napi_ok);
-  // return exports;
 }
 
 NAPI_MODULE(isPrimeNumber, Init)
