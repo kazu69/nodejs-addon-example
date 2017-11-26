@@ -2,7 +2,7 @@
   'targets': [
     {
       'target_name': 'primeNumber',
-      'sources': ['primeNumber.cc', '../prime_number/prime_number.cc'],
+      'sources': ['primeNumber.cpp', '../prime_number/prime_number.cpp'],
       'conditions': [
         [
           'OS=="linux"', 
@@ -25,7 +25,7 @@
           }
         ],
         [
-          'OS=="mac"’,
+          'OS=="mac"',
           {
             'xcode_settings': {
               'CLANG_CXX_LIBRARY': 'libc++',
